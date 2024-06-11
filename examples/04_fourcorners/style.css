@@ -1,0 +1,109 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(172, 172, 172);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+
+    main {
+        width: 500px;
+        height: 500px;
+        background-color: white;
+        position: relative;
+        box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+
+        aside {
+            width: 50px;
+            height: 50px;
+            background-color: green;
+            /* transform: translateX(450px); */
+            position: absolute;
+            left: 0;
+            animation: slide 6s infinite;
+        }
+    }
+}
+
+@keyframes slide {
+
+    /* Green (Start) */
+    0% {
+        top: 0;
+        left: 0;
+    }
+
+    /* Green (End) */
+    19% {
+        background-color: green;
+    }
+
+    /* Red (Start) */
+    20% {
+        top: 0;
+        left: calc(500px - 50px);
+        background-color: red;
+    }
+
+    25% {
+        top: 0;
+        left: calc(500px - 50px);
+    }
+
+    /* Red (End) */
+    44% {
+        background-color: red;
+    }
+
+    /* Blue (Start) */
+    45% {
+        top: calc(500px - 50px);
+        left: calc(500px - 50px);
+        background-color: blue;
+    }
+    
+    50% {
+        top: calc(500px - 50px);
+        left: calc(500px - 50px);
+    }
+
+    /* Blue (End) */
+    69% {
+        background-color: blue;
+    }
+
+    /* Purple (Start) */
+    70% {
+        top: calc(500px - 50px);
+        left: 0;
+        background-color: purple;
+    }
+
+    75% {
+        top: calc(500px - 50px);
+        left: 0;
+    }
+
+    /* Purple (End) */
+    94% {
+        background-color: purple;
+    }
+
+    /* Green (Re-Start) */
+    95% {
+        background-color: green;
+        top: 0;
+        left: 0;
+    }
+
+    100% {
+        top: 0;
+        left: 0;
+    }
+}
