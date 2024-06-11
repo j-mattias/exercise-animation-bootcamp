@@ -1,0 +1,67 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(212, 212, 212);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+
+    aside.spinner {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        border: 1rem solid rgb(136, 68, 201);
+        mask: conic-gradient(#0000 10%, black);
+        animation: spinner 2s infinite linear;
+    }
+
+    aside.spinner-2 {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        border: 1rem dotted rgb(233, 155, 39);
+        mask: conic-gradient(#0000 10%, black);
+        animation: spinner 2s infinite steps(12);
+    }
+
+    aside.loader {
+        width: 250px;
+        height: 50px;
+        border-radius: 8px;
+        border: 4px solid rgb(36, 184, 177);
+        padding: 4px;
+
+        .bar {
+            height: 100%;
+            background-color: rgb(34, 136, 131);
+            border-radius: 4px;
+            animation: loadbar 6s forwards ease-in-out;
+        }
+    }
+}
+
+@keyframes spinner {
+    from {
+        transform: rotateX(0);
+    }
+    to {
+        transform: rotate(359deg);
+    }
+}
+
+@keyframes loadbar {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 100%;
+    }
+}
