@@ -1,0 +1,100 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(212, 212, 212);
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 600;
+}
+
+article {
+    width: 300px;
+    height: 450px;
+    position: relative;
+    perspective: 500px;
+    
+    .front,
+    .back {
+        border-radius: 8px;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2rem;
+        }
+        
+    .front {
+        position: absolute;
+        background: linear-gradient(
+            to bottom right, 
+            rgb(52, 167, 233) 10%, 
+            rgb(57, 207, 212) 90%);
+        z-index: 1;
+        backface-visibility: hidden;
+
+        animation: spin-front 4s infinite;
+    }
+
+    .back {
+        background: radial-gradient(
+                    at center center,
+                    rgb(63, 252, 142), 
+                    rgb(112, 255, 83) 40% 50%,
+                    rgb(33, 235, 77));
+
+        transform: rotateY(.5turn);
+        animation: spin-back 4s infinite;
+        backface-visibility: hidden;
+    }
+}
+
+@keyframes spin-front {
+    0% {
+        transform: rotateY(0turn) scale(1);
+    }
+    25% {
+        transform: rotateY(0turn) scale(1.2);
+    }
+    40% {
+        transform: rotateY(.5turn) scale(1.2);
+    }
+    60% {
+        transform: rotateY(.5turn) scale(1.2);
+    }
+    75% {
+        transform: rotateY(1turn) scale(1.2);
+    }
+    100% {
+        transform: rotateY(1turn) scale(1);
+    }
+}
+
+@keyframes spin-back {
+    0% {
+        transform: rotateY(.5turn) scale(1);
+    }
+    25% {
+        transform: rotateY(.5turn) scale(1.2);
+    }
+    40% {
+        transform: rotateY(1turn) scale(1.2);
+    }
+    60% {
+        transform: rotateY(1turn) scale(1.2);
+    }
+    75% {
+        transform: rotateY(1.5turn) scale(1.2);
+    }
+    100% {
+        transform: rotateY(1.5turn) scale(1);
+    }
+}
