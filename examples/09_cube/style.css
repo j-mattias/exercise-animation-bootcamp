@@ -1,0 +1,91 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background: radial-gradient(
+        rgb(228, 228, 228) 25%, 
+        rgb(27, 38, 56));
+    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 1000px;
+    overflow: hidden;
+}
+
+article {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d;
+    transform-origin: center center -5rem;
+    animation: spin 10s infinite ease-in-out;
+
+    aside {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 10rem;
+        height: 10rem;
+        position: absolute;
+        border: 1px solid rgba(255, 255, 255, 0.5); 
+        box-shadow: 0 0 20px 10px inset rgba(255, 255, 255, 0.5);
+
+        &.side-1 {
+            background-color: rgba(236, 158, 41, 0.5);
+        }
+        &.side-2 {
+            background-color: rgba(173, 45, 173, 0.5);
+            transform: translateX(10rem) rotateY(90deg);
+            transform-origin: left;
+        }
+        &.side-3 {
+            background-color: rgba(236, 100, 123, 0.5);
+            transform: translateY(10rem) rotateX(-90deg);
+            transform-origin: top;
+        }
+        &.side-4 {
+            background-color: rgba(46, 46, 231, 0.5);
+            transform: translateY(-10rem) rotateX(90deg);
+            transform-origin: bottom;
+        }
+        &.side-5 {
+            background-color: rgba(30, 141, 30, 0.5);
+            transform: translateX(-10rem) rotateY(-90deg);
+            transform-origin: right;
+        }
+        &.side-6 {
+            background-color: rgba(224, 34, 34, 0.5);
+            transform: translateZ(-10rem);
+        }
+    }
+}
+
+.shadow {
+    width: 9rem;
+    height: 9rem;
+    background-color: rgba(0, 0, 0, 1);
+    box-shadow: 0 0 10px 10px black;
+    transform: rotateX(85deg);
+    position: absolute;
+    top: clamp(63vh, 65vh, 68vh);
+    opacity: .3;
+    z-index: -1;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate3d(1, 1, 1, 0turn);
+    }
+    to {
+        transform: rotate3d(1, 1, 1, 1turn);
+    }
+}
