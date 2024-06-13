@@ -1,0 +1,156 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #222;
+    background: radial-gradient(rgb(29, 91, 102), rgb(25, 28, 49));
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+    perspective: 500px;
+}
+
+main {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d;
+    animation: spin 30s infinite linear;
+
+    aside {
+        position: absolute;
+        width: 4rem;
+        height: 4rem;
+        border: 2px solid #1ef8db;
+        border-radius: 50%;
+        box-shadow: 
+            0 0 15px rgb(47, 255, 192), 
+            0 0 15px inset rgb(67, 255, 230);
+        animation: wave 3s infinite ease-in-out alternate;
+
+        &:nth-of-type(3n-1) {
+            border: 2px solid #95ffbe;
+            box-shadow: 
+                0 0 15px rgb(116, 255, 190), 
+                0 0 15px inset rgb(142, 255, 199);
+        }
+
+        &.ring-2 {
+            width: 6rem;
+            height: 6rem;
+            animation-delay: 0.4s;
+        }
+        &.ring-3 {
+            width: 8rem;
+            height: 8rem;
+            animation-delay: 0.8s;
+        }
+        &.ring-4 {
+            width: 10rem;
+            height: 10rem;
+            animation-delay: 1.2s;
+        }
+        &.ring-5 {
+            width: 12rem;
+            height: 12rem;
+            animation-delay: 1.6s;
+        }
+        &.ring-6 {
+            width: 14rem;
+            height: 14rem;
+            animation-delay: 2s;
+        }
+        &.ring-7 {
+            width: 16rem;
+            height: 16rem;
+            animation-delay: 2.4s;
+        }
+        &.ring-8 {
+            width: 18rem;
+            height: 18rem;
+            animation-delay: 2.8s;
+        }
+        &.ring-9 {
+            width: 20rem;
+            height: 20rem;
+            animation-delay: 3.2s;
+        }
+        &.ring-10 {
+            width: 22rem;
+            height: 22rem;
+            animation-delay: 3.6s;
+        }
+        &.ring-11 {
+            width: 24rem;
+            height: 24rem;
+            animation-delay: 4s;
+        }
+        &.ring-12 {
+            width: 26rem;
+            height: 26rem;
+            animation-delay: 4.4s;
+        }
+        &.ring-13 {
+            width: 28rem;
+            height: 28rem;
+            animation-delay: 4.8s;
+        }
+        &.ring-14 {
+            width: 30rem;
+            height: 30rem;
+            animation-delay: 5.2s;
+        }
+        &.ring-15 {
+            width: 32rem;
+            height: 32rem;
+            animation-delay: 5.6s;
+        }
+        &.ring-16 {
+            width: 34rem;
+            height: 34rem;
+            animation-delay: 6s;
+        }
+        &.ring-17 {
+            width: 36rem;
+            height: 36rem;
+            animation-delay: 6.4s;
+        }
+        &.ring-18 {
+            width: 38rem;
+            height: 38rem;
+            animation-delay: 6.8s;
+        }
+        &.ring-19 {
+            width: 40rem;
+            height: 40rem;
+            animation-delay: 7.2s;
+        }
+        &.ring-20 {
+            width: 42rem;
+            height: 42rem;
+            animation-delay: 7.6s;
+        }
+    }
+}
+
+@keyframes wave {
+    0% {
+        transform: translateZ(0rem);
+    }
+    100% {
+        transform: translateZ(4rem);
+    }
+}
+
+@keyframes spin {
+    from {
+        transform: rotateY(0deg) rotateX(20deg) scale(0.8);
+    }
+    to {
+        transform: rotateY(359deg) rotateX(20deg) scale(0.8);
+    }
+}
