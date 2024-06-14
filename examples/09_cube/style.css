@@ -44,23 +44,19 @@ article {
         }
         &.side-2 {
             background-color: rgba(173, 45, 173, 0.5);
-            transform: translateX(10rem) rotateY(90deg);
-            transform-origin: left;
+            transform: translateX(5rem) translateZ(-5rem) rotateY(90deg);
         }
         &.side-3 {
             background-color: rgba(236, 100, 123, 0.5);
-            transform: translateY(10rem) rotateX(-90deg);
-            transform-origin: top;
+            transform: translateY(5rem) translateZ(-5rem) rotateX(-90deg);
         }
         &.side-4 {
             background-color: rgba(46, 46, 231, 0.5);
-            transform: translateY(-10rem) rotateX(90deg);
-            transform-origin: bottom;
+            transform: translateY(-5rem) translateZ(-5rem) rotateX(90deg);
         }
         &.side-5 {
             background-color: rgba(30, 141, 30, 0.5);
-            transform: translateX(-10rem) rotateY(-90deg);
-            transform-origin: right;
+            transform: translateX(-5rem) translateZ(-5rem) rotateY(-90deg);
         }
         &.side-6 {
             background-color: rgba(224, 34, 34, 0.5);
@@ -77,7 +73,7 @@ article {
     transform: rotateX(85deg);
     position: absolute;
     top: clamp(63vh, 65vh, 68vh);
-    opacity: .3;
+    opacity: .2;
     z-index: -1;
 }
 
