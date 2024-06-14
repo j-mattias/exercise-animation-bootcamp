@@ -60,7 +60,7 @@ article {
         }
         &.side-6 {
             background-color: rgba(224, 34, 34, 0.5);
-            transform: translateZ(-10rem);
+            transform: translateZ(-10rem) rotateY(180deg);
         }
     }
 }
